@@ -1,0 +1,12 @@
+class Solution:
+    def distinctDifferenceArray(self, nums: List[int]) -> List[int]:
+        res =[]
+        for i in range(len(nums)):
+            prefix = nums[:i+1]
+            suffix = nums[i+1:]
+            
+            first= len(set(prefix)) 
+            second =len(set(suffix))
+            
+            res.append(first - second)
+        return res  
