@@ -1,0 +1,15 @@
+class Solution:
+    
+
+    def climbStairs(self, n: int) -> int:
+        if n <=3:
+            return n
+        a=2
+        b=3
+        val = 0
+
+        for i in range(3,n):
+          val = a+b
+          a=b
+          b=val
+        return val   
