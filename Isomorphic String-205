@@ -1,0 +1,14 @@
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        
+        ress = [0]*200
+        rest = [0]*200
+        if len(s) != len(t):
+            return False
+        for i in range(len(s)):
+            if ress[ord(s[i])] != rest[ord(t[i])]:
+                return False
+            ress[ord(s[i])] = i+1
+            rest[ord(t[i])] = i+1
+        return False
+
