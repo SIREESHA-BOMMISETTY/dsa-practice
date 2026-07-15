@@ -1,0 +1,15 @@
+class Solution(object):
+    def deleteDuplicates(self, head):
+        """
+        :type head: Optional[ListNode]
+        :rtype: Optional[ListNode]
+        """
+        temp = head
+
+        while head and head.next:
+            if head.val == head.next.val:
+                head.next= head.next.next
+            else:
+                head = head.next
+        return temp            
+        
