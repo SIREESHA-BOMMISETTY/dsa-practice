@@ -10,5 +10,5 @@ class Solution:
                 return False
             ress[ord(s[i])] = i+1
             rest[ord(t[i])] = i+1
-        return False
+        return True
 
