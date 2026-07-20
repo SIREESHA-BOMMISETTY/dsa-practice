@@ -1,0 +1,17 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> List[int]:
+        
+        res = [0,0]
+        ind = 0
+        for i in range(len(nums)):
+            found = False
+            for j in range(len(nums)):
+                if i !=j and nums[i] == nums[j]:
+                    found = True
+                    break
+            if found == False:
+                res[ind] = nums[i]  
+                ind+=1 
+                if ind == 2:
+                    break 
+        return res
